@@ -161,7 +161,7 @@
 	<script type="text/javascript" src="../materialize/js/materialize.min.js"></script>
 	<script type="text/javascript" src="mustache.js"></script>
 	<script type="text/javascript" src="api_mustache.js"></script>
-	<script type="text/javascript" src="collapsible.js">
+	
 	
 </script>
 </body>

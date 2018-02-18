@@ -3,24 +3,34 @@
 <head>
 	<title>API Rush2</title>
 	<link type="text/css" rel="stylesheet" href="../materialize/css/materialize.min.css"  media="screen,projection"/>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
 </head>
 <body>
 	<div class="section">
-		<div class="row">
-			<div class="col s12">
-				<div class="row">
-					<div class="input-field col s10">
-						<i class="material-icons prefix">Search:</i>
-						<input action=" index_search.php" type="text" id="autocomplete-input" class="autocomplete" style="
-						margin-left:  10%;
-						">
-						<label for="autocomplete-input">Autocomplete</label>
-					</div>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col S2">
+					<h3> Type of :</h3>
+				</div>
+
+				<div class="container">
+					<div class="section">
+						<div class="row">
+							<div class="col s12">
+								<nav>
+									<div id="item_genres">
+
+									</div>
+								</nav>
+							</div>
+						</div>
+					</div>	
 				</div>
 			</div>
-		</div>
+		</div>		
 	</div>
 	<div class="container-fluid">
 		<div class="row">
@@ -53,6 +63,11 @@
 			</div>
 		</div>
 	</div>
+<script id="script_genres" type="text/template">
+	
+	 <a href="#!" class="breadcrumb">{{name}}</a>
+	
+</script>
 
 	<script  id="script_albums" type="text/template">
 	<div>
@@ -63,7 +78,7 @@
 				<p>Description: <br>
 					{{{description}}}
 				</p>
-				<a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+				
 			</li>
 			<li class="collection-item avatar">
 				<i class="material-icons circle">folder</i>
@@ -71,7 +86,7 @@
 				<p>Popularity: {{{popularity}}}<br>
 					Cover small:</strong><a href="{{{cover}}}"><img src="{{{cover_small}}}"></a>
 				</p>
-				<a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+				
 			</li>
 
 		</ul>
@@ -87,7 +102,7 @@
 				<p>Description: <br>
 					{{{description}}}
 				</p>
-				<a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+				
 			</li>
 			<li class="collection-item avatar">
 				<i class="material-icons circle">folder</i>
@@ -95,7 +110,7 @@
 				<p>Popularity: {{{popularity}}}<br>
 					Cover small:</strong><a href="{{{photo}}}"><img src="{{{photo}}}"></a>
 				</p>
-				<a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+				
 			</li>
 
 		</ul>
@@ -106,27 +121,25 @@
 	<div>
 		<ul class="collection">
 			<li class="collection-item avatar">
-				<img src="{{{photo}}}" alt="photo artist" class="circle">
+				<i class="material-icons circle green">Aw!</i>
 				<span class="title">Artists: {{{artists}}}</span>
 				<p>Song's name: <br>
 					{{{name}}}
 				</p>
-				<a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+				
 			</li>
 			<li class="collection-item avatar">
-				<i class="material-icons circle">folder</i>
+				<i class="material-icons circle">Oi!</i>
 				<span class="title">Duration: {{{duration}}}</span>
 				<p>N°: {{{tracks_no}}}<br>
 					MP3: <audio controls="controls"><source src="{{{mp3}}}" type="audio/mp3" /></audio>
 				</p>
-				<a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+				
 			</li>
 
 		</ul>
 	</div>
 	</script>
-
-
 
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

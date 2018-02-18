@@ -21,7 +21,8 @@ $.getJSON("http://localhost/tests/Projet-Web_Rush_2/api/tracks/read_paging.php",
 	$.each(data, function(key,value){
 		tracks(value.id, value.album,value.artist, value.name, value.track_no, value.duration, value.mp3);
 	});
-});
+}); 
+
 $.getJSON("http://localhost/tests/Projet-Web_Rush_2/api/genres/read.php",{
 }).done(function(data){
 	$.each(data, function(key,value){
@@ -29,11 +30,13 @@ $.getJSON("http://localhost/tests/Projet-Web_Rush_2/api/genres/read.php",{
 	});
 })
 });
+
 function genres(name){
 	var template_genres = $('#script_genres').html();
 	var html_genres = Mustache.render(template_genres, {name});
 	$('#item_genres').append(html_genres);
 }
+
 function albums(id, name, description, cover, cover_small, release_date, popularity){
 	var template_albums = $('#script_albums').html();
 	var html_albums = Mustache.render(template_albums, {
