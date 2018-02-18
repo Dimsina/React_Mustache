@@ -37,7 +37,7 @@
 		<script id="script_artists" type="text/template">
 		<hr>
 		<div class="card">
-			<img src="{{{photo}}}">
+			<img src="{{{photo}}}" class="rounded mx-auto d-block">
 			<div class="card-body">
 				<h5 class="card-title">Artists: {{{name}}}</h5>
 				<p class="card-text">Description:</{{{description}}}</p>
