@@ -40,6 +40,7 @@
 			<a href="{{{cover}}}"><img src="{{{cover_small}}}" alt="cover small" class="rounded mx-auto d-block"></a>
 			<div class="card-body">
 				<h5 class="card-title">Album name: {{name}}</h5>
+				<p class="card-text">Genre: {{{genre}}} </p>
 				<p class="card-text">Description: {{{description}}}</p>
 			</div>
 			<ul class="list-group list-group-flush">	

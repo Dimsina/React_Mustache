@@ -19,6 +19,7 @@
 				<thead>
 				<tr>
 					<th>Name</th>
+					<th>Genre</th>
 					<th>Description</th>
 					<th>Cover</th>
 					<th>Release date</th>
@@ -51,6 +52,7 @@
 			
 		<tr>
 			<td>{{{name}}}</td>
+			<td>{{{genre}}} </td>
 			<td> {{{description}}}</td>
 			<td><a href="{{{cover}}}"><img src="{{{cover_small}}}"></a></td>
 			<td> {{{release_date}}}</td>

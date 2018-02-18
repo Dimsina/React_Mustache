@@ -11,7 +11,7 @@ $.getJSON("http://localhost/tests/Projet-Web_Rush_2/api/artists/read_paging.php"
 $.getJSON("http://localhost/tests/Projet-Web_Rush_2/api/albums/read_paging.php", {	
 }).done(function(data){
 	$.each(data, function(key,value){
-		albums(value.id, value.name, value.description, value.cover,
+		albums(value.id, value.name, value.genre, value.description, value.cover,
 			value.cover_small, value.release_date, value.popularity);
 	});
 })
@@ -37,11 +37,12 @@ function genres(name){
 	$('#item_genres').append(html_genres);
 }
 
-function albums(id, name, description, cover, cover_small, release_date, popularity){
+function albums(id, name, genre, description, cover, cover_small, release_date, popularity){
 	var template_albums = $('#script_albums').html();
 	var html_albums = Mustache.render(template_albums, {
 			id,
 			name,
+			genre,
 			description,
 			cover,
 			cover_small,

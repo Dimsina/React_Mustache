@@ -75,6 +75,7 @@
 			<li class="collection-item avatar">
 				<img src="{{{cover_small}}}" alt="cover small" class="circle">
 				<span class="title">Album name: {{name}}</span>
+				<p>Genre: {{{genre}}} </p>
 				<p>Description: <br>
 					{{{description}}}
 				</p>
