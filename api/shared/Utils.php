@@ -19,7 +19,7 @@ class Utils
 		for($x=$initial_num; $x<$condition_limit_num; $x++){
 			if(($x > 0) && ($x <= $total_pages)){
 				$paging_arr['pages'][$page_count]["page"]=$x;
-				$paging_arr['pages'][$page_count]["url"]="{$page_url}page={$x}";
+				$paging_arr['pages'][$page_count]["url"]="{$page_url}{$x}";
 				$paging_arr['pages'][$page_count]["current_page"] = $x==$page ? "yes" : "no";
 
 				$page_count++;

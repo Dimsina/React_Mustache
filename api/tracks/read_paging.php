@@ -15,8 +15,9 @@ $track = new Track();
 $num = $track->readPaging($from_record_num,$records_per_page);
 $result = $track->resultSet();
 $total_rows = $track->count();
-$page_url = ROOT_PATH."tracks/read_paging.php?";
+$page_url = "/track/page/";
 $paging= $utils->getPaging($page, $total_rows, $records_per_page, $page_url);
-$result["paging"]=$paging;
+array_push($result,["paging" => $paging]);
+
 
 echo json_encode($result);

@@ -11,12 +11,12 @@ include_once '../objects/Artist.php';
 $utils = new Utils();
 
 $artists = new Artist();
-// query product count number of rows
+
 $num = $artists->readPaging($from_record_num,$records_per_page);
 $result = $artists->resultSet();
 $total_rows = $artists->count();
-$page_url = ROOT_PATH."artists/read_paging.php?";
+$page_url = "/artist/page/";
 $paging= $utils->getPaging($page, $total_rows, $records_per_page, $page_url);
-$result["paging"]=$paging;
+array_push($result,["paging" => $paging]);
 
 echo json_encode($result);
